@@ -16,12 +16,12 @@ class List
 	ListElem* head;
 	ListElem* tail;
 public:
-	List()//конструктор
+	List()//РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
 	{
 		head = nullptr;
 		tail = nullptr;
 	}
-	~List()//деструктор 
+	~List()//РґРµСЃС‚СЂСѓРєС‚РѕСЂ 
 	{
 		while (head != nullptr) 
 		{
@@ -30,7 +30,7 @@ public:
 			head = curr;
 		}
 	}
-	void pushHead(ListElem* elem)//добаление элемента в начало списка  
+	void pushHead(ListElem* elem)//РґРѕР±Р°Р»РµРЅРёРµ СЌР»РµРјРµРЅС‚Р° РІ РЅР°С‡Р°Р»Рѕ СЃРїРёСЃРєР°  
 	{
 		if (head != nullptr)
 		{
@@ -44,7 +44,7 @@ public:
 			tail = head;
 		}
 	}
-	void push(ListElem* elem)//добаление элемента в конец списка 
+	void push(ListElem* elem)//РґРѕР±Р°Р»РµРЅРёРµ СЌР»РµРјРµРЅС‚Р° РІ РєРѕРЅРµС† СЃРїРёСЃРєР° 
 	{
 		if (tail != nullptr)
 		{
@@ -58,7 +58,7 @@ public:
 			tail = head;
 		}
 	}
-	void popHead()//удаление первого элемента списка
+	void popHead()//СѓРґР°Р»РµРЅРёРµ РїРµСЂРІРѕРіРѕ СЌР»РµРјРµРЅС‚Р° СЃРїРёСЃРєР°
 	{
 		if (head != nullptr)
 		{
@@ -68,7 +68,7 @@ public:
 			head->prev = nullptr;
 		}
 	}
-	void pop() //удаление последнего элемента списка
+	void pop() //СѓРґР°Р»РµРЅРёРµ РїРѕСЃР»РµРґРЅРµРіРѕ СЌР»РµРјРµРЅС‚Р° СЃРїРёСЃРєР°
 	{
 		if (head != nullptr)
 		{
@@ -88,7 +88,7 @@ public:
 		
 		return tail;
 	}
-	int getSize()//получение размера 
+	int getSize()//РїРѕР»СѓС‡РµРЅРёРµ СЂР°Р·РјРµСЂР° 
 	{
 		if (head == nullptr)
 			return 0;
@@ -101,7 +101,7 @@ public:
 		}
 		return size;
 	}
-	void remove(int data)//удаленте элементов равных заданному
+	void remove(int data)//СѓРґР°Р»РµРЅС‚Рµ СЌР»РµРјРµРЅС‚РѕРІ СЂР°РІРЅС‹С… Р·Р°РґР°РЅРЅРѕРјСѓ
 	{
 		if (head != nullptr)
 		{
@@ -141,7 +141,7 @@ public:
 			
 		}
 	}
-	List(const List& list)//конструктор копирования
+	List(const List& list)//РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєРѕРїРёСЂРѕРІР°РЅРёСЏ
 	{
 		head = nullptr;
 		tail = nullptr;
@@ -156,7 +156,7 @@ public:
 		}
 	}
 
-	List&  operator=(const List& list)//копирующий оператор присваивания
+	List&  operator=(const List& list)//РєРѕРїРёСЂСѓСЋС‰РёР№ РѕРїРµСЂР°С‚РѕСЂ РїСЂРёСЃРІР°РёРІР°РЅРёСЏ
 	{
 		if (&list == this)
 			return *this;
